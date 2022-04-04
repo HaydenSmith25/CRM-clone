@@ -6,10 +6,10 @@ function Nav() {
   return (
     <nav>
       <div className="controls">
-        <div classname="icon" onClick={() => navigate("/ticket")}>
+        <div className="icon" onClick={() => navigate("/ticket")}>
           {"+"}
         </div>
-        <div classname="icon" onClick={() => navigate("/")}>
+        <div className="icon" onClick={() => navigate("/")}>
           {"<"}
         </div>
       </div>
