@@ -9,12 +9,12 @@ function TicketCard({ color, ticket }) {
   return (
     <div clasName="ticket-card">
       <Link to={`/ticket/${ticket.documentId}`} id="Link">
-        <div className="ticket-color"></div>
+        <div className="ticket-color" style={{ backgroundColor: color }}></div>
         <h3>{ticket.title}</h3>
         <AvatarDisplay ticket={ticket} />
-        <StatusDsiplay />
-        <ProgressDisplay />
-        <PriorityDisplay />
+        <StatusDsiplay status={ticket.status} />
+        <PriorityDisplay priority={ticket.priority} />
+        <ProgressDisplay progress={ticket.progress} />
       </Link>
       <DeleteBlock />
     </div>
