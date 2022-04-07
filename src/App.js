@@ -3,6 +3,8 @@ import Nav from "./components/Nav";
 import Dashboard from "./pages/Dashboard";
 import TicketPage from "./pages/TicketPage";
 
+//App component that contains each individual component and the routes
+
 function App() {
   return (
     <div className="App">
