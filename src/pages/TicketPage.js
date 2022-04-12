@@ -126,8 +126,8 @@ function TicketPage() {
               <label htmlFor="priority-5">5</label>
             </div>
 
-            {editMode && (
-              <>
+            {
+              /*editMode &&*/ <>
                 <input
                   type="range"
                   id="progress"
@@ -138,8 +138,49 @@ function TicketPage() {
                   onChange={handleChange}
                 />
                 <label htmlFor="progress">Progress</label>
+
+                <label>Status</label>
+                <select
+                  name="status"
+                  value={formData.status}
+                  onChange={handleChange}
+                >
+                  <option selected={formData.status === "done"} value={"done"}>
+                    Done
+                  </option>
+                  <option
+                    selected={formData.status === "working on it"}
+                    value={"working on it"}
+                  >
+                    Working on it
+                  </option>
+                  <option
+                    selected={formData.status === "stuck"}
+                    value={"stuck"}
+                  >
+                    Stuck
+                  </option>
+                  <option
+                    selected={formData.status === "not started"}
+                    value={"not started"}
+                  >
+                    Not started
+                  </option>
+                </select>
               </>
-            )}
+            }
+            <input type="submit" />
+            <section>
+              <label htmlFor="owner">Owner</label>
+              <input
+                id="owner"
+                name="owner"
+                type="text"
+                onChange={handleChange}
+                required={true}
+                value={formData.owner}
+              />
+            </section>
           </section>
         </form>
       </div>
