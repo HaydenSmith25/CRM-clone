@@ -18,7 +18,6 @@ function Dashboard() {
     },
     {
       category: "Q1 2022",
-      color: "red",
       title: "Build and sell AI Model",
       owner: "Hayden Smith",
       avatar:
