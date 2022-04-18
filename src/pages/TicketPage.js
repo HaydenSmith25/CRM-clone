@@ -126,8 +126,8 @@ function TicketPage() {
               <label htmlFor="priority-5">5</label>
             </div>
 
-            {
-              /*editMode &&*/ <>
+            {editMode && (
+              <>
                 <input
                   type="range"
                   id="progress"
@@ -168,7 +168,7 @@ function TicketPage() {
                   </option>
                 </select>
               </>
-            }
+            )}
             <input type="submit" />
             <section>
               <label htmlFor="owner">Owner</label>
